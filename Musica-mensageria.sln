@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "musica-mensageria-api-producer", "musica-mensageria-api-producer\musica-mensageria-api-producer.csproj", "{4F0AD78D-D434-424E-B121-BE8CA813100D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "musica-mensageria-consumer", "musica-mensageria-consumer\musica-mensageria-consumer.csproj", "{377A4514-52C0-4B98-BEAE-B2376362181A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F0AD78D-D434-424E-B121-BE8CA813100D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0AD78D-D434-424E-B121-BE8CA813100D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0AD78D-D434-424E-B121-BE8CA813100D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0AD78D-D434-424E-B121-BE8CA813100D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377A4514-52C0-4B98-BEAE-B2376362181A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377A4514-52C0-4B98-BEAE-B2376362181A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377A4514-52C0-4B98-BEAE-B2376362181A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377A4514-52C0-4B98-BEAE-B2376362181A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

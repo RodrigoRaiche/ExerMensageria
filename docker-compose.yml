@@ -1,0 +1,50 @@
+version: '3'
+
+networks:
+  mensageria-network:
+    driver: bridge
+
+services:
+  musica-mensageria-api-producer:
+    image: ${DOCKER_REGISTRY-}musicamensageriaapiproducer
+    build:
+      context: .
+      dockerfile: musica-mensageria-api-producer/Dockerfile
+    networks:
+      - mensageria-network
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+
+  musica-mensageria-consumer:
+    image: ${DOCKER_REGISTRY-}musicamensageriaconsumer
+    build:
+      context: .
+      dockerfile: musica-mensageria-consumer/Dockerfile
+    networks:
+      - mensageria-network
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
+      - musica-mensageria-api-producer
+    environment:
+      - DOTNET_ENVIRONMENT=Development
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - /docker_conf/rabbitmq/data/:/var/lib/rabbitmq/
+    environment:
+      - RABBITMQ_DEFAULT_USER = guest
+      - RABBITMQ_DEFAULT_PASSWORD = guest
+    restart: always
+    networks:
+      - mensageria-network

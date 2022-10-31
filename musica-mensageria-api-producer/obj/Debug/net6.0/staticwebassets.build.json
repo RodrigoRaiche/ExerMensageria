@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cdHX1tELC3KnUWPGubNxM9Y7IFwFmsRyLcBz4ZqD5m0=",
+  "Source": "musica-mensageria-api-producer",
+  "BasePath": "_content/musica-mensageria-api-producer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
